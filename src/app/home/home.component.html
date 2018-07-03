@@ -2,13 +2,17 @@
         <div class="w3layouts_main_grid">
             <div class="w3layouts_main_grid_left">
                 <h2>{{locationName}}</h2>
-                <p>{{weather_condition}}</p>
+                <p>{{weather_condition}} / Max {{Tempmin}}<span>°c</span>-Min {{Tempmax}}<span>°c</span></p>
                 <h3>Now</h3>
                 <h4>{{cur_temp}}<span>°c</span></h4>
             </div>
             <div class="w3layouts_main_grid_right">
-                <canvas id="sleet" width="70" height="70"> </canvas>
+               <!-- <canvas id="sleet" width="70" height="70"> </canvas> -->
+               <div >
+                <img src="{{curent_icon}}">
                 <div id="w3time"></div>
+               </div>
+                
                 <div class="w3layouts_date_year">
                     <!-- date -->
                         <script type="text/javascript">
@@ -47,7 +51,7 @@
                     <div class="w3ls_main_grid_left_grid1">
                         <div class="w3l_main_grid_left_grid1_left">
                             <h3>Cloud</h3>
-                            <p>38 <span>%</span></p>
+                            <p>{{Cloud}}<span>%</span></p>
                         </div>
                         <div class="w3l_main_grid_left_grid1_right">
                             <canvas id="cloudy" width="45" height="45"></canvas>
@@ -57,7 +61,7 @@
                     <div class="w3ls_main_grid_left_grid1">
                         <div class="w3l_main_grid_left_grid1_left">
                             <h3>Wind</h3>
-                            <p>14 <span>Km/h</span></p>
+                            <p> {{windSpeed}} <span>Km/h</span></p>
                         </div>
                         <div class="w3l_main_grid_left_grid1_right">
                             <canvas id="wind" width="45" height="45"></canvas>
